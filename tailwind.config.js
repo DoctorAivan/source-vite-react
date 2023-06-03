@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'ubuntu': ['"Ubuntu"'],
+        'merriweather': ['"Merriweather"'],
+        'BebasNeue': ['"Bebas Neue"']
+      },
       animation: {
         smile: 'smile 2s ease-in-out infinite',
         textOpacity: 'textOpacity 1.75s ease-in-out infinite',
@@ -14,6 +19,9 @@ module.exports = {
         fadeIn: 'fadeIn 1.25s ease 1 forwards',
         modal: 'modal 0.5s ease 1 forwards',
         loading: 'loading 3s linear infinite',
+        precargaOn: 'precargaOn 0.5s ease 1 forwards',
+        precargaOff: 'precargaOff 0.5s ease 1 forwards',
+        update: 'update 1.25s ease 1 forwards',
       },
       keyframes: {
         smile: {
@@ -49,8 +57,24 @@ module.exports = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+
+        precargaOn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '0.9' }
+        },
+        precargaOff: {
+          '0%': { opacity: '0.9' },
+          '100%': { opacity: '0' }
+        },
+        update: {
+          '0%': { opacity: '0' },
+          '50%': { opacity: '1' },
+          '100%': { opacity: '0' }
+        },
       }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ]
 }

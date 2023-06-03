@@ -1,3 +1,116 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #a9b7ce;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #59657a;
+}
+
+.form-input
+{
+    @apply
+    appearance-none w-full pl-14 pr-6 pt-[10px] pb-[13px] bg-slate-600 border border-slate-500 rounded-xl text-white text-base placeholder-slate-400/70 shadow-lg shadow-violet-500/5 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500
+}
+
+.form-input-small
+{
+    @apply
+    transition uppercase
+    bg-slate-600 focus:bg-slate-800
+    appearance-none w-full pl-[60px] pr-6 pt-[9px] pb-[12px]
+    border border-slate-500 rounded-xl
+    text-slate-200 text-base font-light placeholder-slate-400/70 shadow-xl shadow-slate-800/5
+    focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:text-indigo-400 focus:shadow-slate-800/30
+}
+.form-input-small-error
+{
+    @apply
+    transition
+    bg-slate-900/30 focus:bg-slate-800
+    appearance-none w-full px-6 pt-[9px] pb-[12px]
+    border border-rose-500 rounded-xl
+    text-slate-200 text-base font-light placeholder-rose-400/50 shadow-xl shadow-slate-800/5
+    focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:text-rose-400 focus:shadow-slate-800/30
+}
+
+.form-input-date
+{
+    @apply
+    transition
+    bg-slate-600 focus:bg-slate-800
+    appearance-none w-full px-6 pt-[11px] pb-[14px]
+    border border-slate-500 rounded-xl
+    text-slate-200 text-[0.92rem] font-light placeholder-slate-400/70 shadow-xl shadow-slate-800/5
+    focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:text-indigo-400 focus:shadow-slate-800/30
+}
+.form-input-date-error
+{
+    @apply
+    transition
+    bg-slate-900/30 focus:bg-slate-800
+    appearance-none w-full px-6 pt-[11px] pb-[14px]
+    border border-rose-500 rounded-xl
+    text-slate-200 text-[0.92rem] font-light placeholder-rose-400/50 shadow-xl shadow-slate-800/5
+    focus:outline-none focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:text-rose-400 focus:shadow-slate-800/30
+}
+
+.form-input-select
+{
+    @apply
+    transition
+    block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500
+}
+
+.event-details
+{
+    @apply
+    tracking-wide
+}
+    .event-details b
+    {
+        @apply
+        font-medium  
+    }
+
+.live-cronometer
+{
+    background: #4cd800;
+    background: conic-gradient(red 90deg, gray);
+}
+
+.picker
+{
+    position: relative;
+    width: 400px;
+}
+    .popover {
+        z-index: 99;
+        width: 210px;
+        position: absolute;
+        top: calc(100% - 35px);
+        left: 55px;
+    }
+        .popover .react-colorful
+        {
+            width: 100%;
+            height: 149px;
+        }
+        .popover .react-colorful__hue
+        {
+            height: 10px;
+            border-radius: 0px;
+        }
+        .popover .react-colorful__pointer
+        {
+            width: 18px;
+            height: 18px;
+        }
